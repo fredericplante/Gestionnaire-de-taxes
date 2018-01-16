@@ -1,4 +1,4 @@
-# Gestionnaire-de-taxes-de-St--Érable
+# Gestionnaire-de-taxes-de-St-Érable
 C'était un des TP qui était à faire dans la classe de programmation au CEGEP et qui m'a value 97% comme note.
 
 Ce code est suffisament hors du commun pour dire que si tu oses l'utiliser pour ton cours de programmation, 
