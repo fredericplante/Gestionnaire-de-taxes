@@ -1,6 +1,6 @@
 /*
 **	Systeme de gestion de la ville Saint-Erable!
-**	Auteur: Frédéric Plante
+**	Auteur: FrÃ©dÃ©ric Plante
 **	Date: 27-octobre-2017
 **	Mon but au travers ce travail etait de laisser
 **	une trace, Faire une marque, Je crois que mon 
@@ -18,9 +18,9 @@
 using namespace std;
 
 	/*
-	*	5. Définissez une structure (struct) et nommez-la « resident ».
+	*	5. DÃ©finissez une structure (struct) et nommez-la Â« resident Â».
 	*	Cette structure permettra de regrouper tous les champs qui 
-	*	représentent un résident. La structure « resident » doit être
+	*	reprÃ©sentent un rÃ©sident. La structure Â« resident Â» doit Ãªtre
 	*	visible de partout dans le programme.
 	*/
 
@@ -42,7 +42,7 @@ struct resident
 struct systeme 
 {
 
-   const char Titre[] = "Système de gestion de la ville de Saint-Érable!";;
+   const char Titre[] = "SystÃ¨me de gestion de la ville de Saint-Ã‰rable!";;
    string nomdefichie = "residents.txt";
    int nbResident;
    const int nbcasMAX = 1000;
@@ -50,38 +50,38 @@ struct systeme
 };
 */
 
-const int nbcasMAX = 1000;									//Vous prévoyez une augmentation de la population?
-const char  Titre[] = "Système de gestion de la ville de Saint-Érable!";
-const string nomdefichier = "residents.txt";				//Elle sera modifiée dans une révision future du système.
+const int nbcasMAX = 1000;									//Vous prÃ©voyez une augmentation de la population?
+const char  Titre[] = "SystÃ¨me de gestion de la ville de Saint-Ã‰rable!";
+const string nomdefichier = "residents.txt";				//Elle sera modifiÃ©e dans une rÃ©vision future du systÃ¨me.
 const string  mode_Affichage = "MODE CON LINES=24 COLS=100";
 const string Etiquette_nbLigne = "LINES=";
 const string Etiquette_nbCollone = "COLS=";
 
-const string texte_Menus[20][25] =							//Tout le texte du programme est chargé depuis ici
-{															//Il serait simple de créer un fichier langue.txt
+const string texte_Menus[20][25] =							//Tout le texte du programme est chargÃ© depuis ici
+{															//Il serait simple de crÃ©er un fichier langue.txt
 															//et ainsi adapter le programme pour d'autres langues.
 	{	// 0 Menu principale
 
-	"\t\t\tSystème de gestion de la ville\n",
-	" (1) Nouveau(x) résident(s)\n",
-	" (2) Afficher les informations des résidents\n"
-	" (3) Modifier résident(s)\n",
-	" (4) Supprimer résident(s)\n",
+	"\t\t\tSystÃ¨me de gestion de la ville\n",
+	" (1) Nouveau(x) rÃ©sident(s)\n",
+	" (2) Afficher les informations des rÃ©sidents\n"
+	" (3) Modifier rÃ©sident(s)\n",
+	" (4) Supprimer rÃ©sident(s)\n",
 	" (5) TAXES\n",
 	" (6) Sortir du programme\n", 
 	"\n\n",
 	"Votre choix ==>",
 	"",
-	"\nVille Saint-Érable, À bientôt!\n",
+	"\nVille Saint-Ã‰rable, Ã€ bientÃ´t!\n",
 	""
 
 	},
 
-	{	// 1 Nouveau résident(s)
+	{	// 1 Nouveau rÃ©sident(s)
 
-	"\n\tCRÉATION DE DOSSIER RÉSIDENT\n",
+	"\n\tCRÃ‰ATION DE DOSSIER RÃ‰SIDENT\n",
 	"\n",
-	" (1) ajouter un résident\n",
+	" (1) ajouter un rÃ©sident\n",
 	" (2) Revenir au menu principal\n",
 	" (3) Sortir du programme\n",
 	"\n",
@@ -89,23 +89,23 @@ const string texte_Menus[20][25] =							//Tout le texte du programme est chargé
 	"Votre choix ==>",
 	"",
 	"NOM",
-	"PRÉNOM",
+	"PRÃ‰NOM",
 	"NAS",
-	"NUMÉRO CIVIQUE",
+	"NUMÃ‰RO CIVIQUE",
 	"RUE",
 	"ARRONDISSEMENT", 
 	"VILLE",
-	"\nEntrez la superficie en m² ou pi²\nsuivi d'un [espace] et de la lettre [m] ou [p] ",
+	"\nEntrez la superficie en mÂ² ou piÂ²\nsuivi d'un [espace] et de la lettre [m] ou [p] ",
 	"",
 
 	},
 
 	{	// 2 Afficher les informations
 
-	"\n\tAffichage des données des résidents\n\nVoulez-vous\n\n",
-	" (1) Afficher les résidents de la ville\n",
-	" (2) Afficher les résidents dans l'ordre alphabétique\n",
-	" (3) Afficher les résidents dans l'ordre croissant du NAS\n",
+	"\n\tAffichage des donnÃ©es des rÃ©sidents\n\nVoulez-vous\n\n",
+	" (1) Afficher les rÃ©sidents de la ville\n",
+	" (2) Afficher les rÃ©sidents dans l'ordre alphabÃ©tique\n",
+	" (3) Afficher les rÃ©sidents dans l'ordre croissant du NAS\n",
 	" (4) Revenir au menu principal\n",
 	" (5) Sortir du programme\n",
 	"\n\n",
@@ -113,25 +113,25 @@ const string texte_Menus[20][25] =							//Tout le texte du programme est chargé
 	"",
 	"id",
 	"nom",
-	"prénom",
+	"prÃ©nom",
 	"NAS",
 	"numciv",
 	"rue",
 	"arrond",
 	"ville",
-	"m²"
+	"mÂ²"
 
 	},
 
-	{	// 3 Modifier résident(s)
+	{	// 3 Modifier rÃ©sident(s)
 
-	"\n\tModification des données d'un résident\n\n",
-	"\nIdentidiant du résident ==>",
+	"\n\tModification des donnÃ©es d'un rÃ©sident\n\n",
+	"\nIdentidiant du rÃ©sident ==>",
 	"",
 	"Modifier...\n"
 	" (1) Le nom\n",
-	" (2) Le prénom\n",
-	" (3) Le numéro civique\n",
+	" (2) Le prÃ©nom\n",
+	" (3) Le numÃ©ro civique\n",
 	" (4) Le rue\n",
 	" (5) L'arrondissement\n",
 	" (6) Le ville\n",
@@ -141,43 +141,43 @@ const string texte_Menus[20][25] =							//Tout le texte du programme est chargé
 	"\n",
 	"Votre choix ==> ",	
 	"",
-	" (1) Modifier un autre résident\n",
+	" (1) Modifier un autre rÃ©sident\n",
 	" (2) Revenir au menu principal\n"
 	" (3) Sortir du programme\n",
 	" \n\n",
 	"Votre choix ==> ",
 	"",
-	"\nModifications effectuées avec succès!",
+	"\nModifications effectuÃ©es avec succÃ¨s!",
 
 	},
 
-	{	// 4 Supprimer résident(s) Ça, c'est quand le résident ne paye pas, on le supprime de la liste.
+	{	// 4 Supprimer rÃ©sident(s) Ã‡a, c'est quand le rÃ©sident ne paye pas, on le supprime de la liste.
 
-	"\n\tSuppression d'un résident\n\n",
-	" (1) Supprimer un résident\n",
+	"\n\tSuppression d'un rÃ©sident\n\n",
+	" (1) Supprimer un rÃ©sident\n",
 	" (2) Revenir au menu principal\n",
 	" (3) Sortir du programme\n",
 	" \n\n",
 	"Votre choix ==>",
 	"",
 	"\n",
-	"Identifiant du résident ==>",
-	"\t\tÊtes-vous sûr de vouloir supprimer ce résident du registre (o/n) ==>",
+	"Identifiant du rÃ©sident ==>",
+	"\t\tÃŠtes-vous sÃ»r de vouloir supprimer ce rÃ©sident du registre (o/n) ==>",
 	"",
-	"Le résident à été supprimé avec succès!",
+	"Le rÃ©sident Ã  Ã©tÃ© supprimÃ© avec succÃ¨s!",
 	""
 
 	},
 
-	{	// 5 Les taxes, le bout qui justifie le reste, selon la plupart, sauf moi, je trouve ça poche.
+	{	// 5 Les taxes, le bout qui justifie le reste, selon la plupart, sauf moi, je trouve Ã§a poche.
 
-	"\n\tITEM DE TAXATION\n\n Entrez un taux de taxation au ($/m²) pour débuter la simulation ==>",
+	"\n\tITEM DE TAXATION\n\n Entrez un taux de taxation au ($/mÂ²) pour dÃ©buter la simulation ==>",
 	"",
 	"Taux actuel:",
 	"\n",
 	"Total des taxes recueillies par la ville: ",
 	"\n",
-	"Résident qui paye le plus de taxe:",
+	"RÃ©sident qui paye le plus de taxe:",
 	"\n\n",
 	" (1) Revenir au menu principal\n",
 	" (2) Sortir du programme\n",
@@ -189,7 +189,7 @@ const string texte_Menus[20][25] =							//Tout le texte du programme est chargé
 }; 
 
 	/*
-	*	2. 	Pour chaque option du menu, vous définissez une fonction.
+	*	2. 	Pour chaque option du menu, vous dÃ©finissez une fonction.
 	*/
 
 //Fonctions menu
@@ -220,7 +220,7 @@ int rechercheSuperMax(resident[]);
 int NouvelIdentifiant(resident[]);
 int trouver_une_valeur_par_Etiquette(string, string); 
 
-//Fonctions d'entrée
+//Fonctions d'entrÃ©e
 
 char  demandeCaractere(string);
 string demandeTexte(string);
@@ -247,19 +247,19 @@ int main()
 
 	setlocale(LC_ALL, "");
 	SetConsoleTitle(Titre);
-	system((char*)mode_Affichage.c_str()); // Ça en prend plus quand on ajoute la Ville
+	system((char*)mode_Affichage.c_str()); // Ã‡a en prend plus quand on ajoute la Ville
 
 	/*
-	*	Vous prévoyez aussi déclarer, dans la fonction principale, 
-	*	un tableau de type « résident » pour contenir les
-	*	informations de tous les résidents de la ville.
+	*	Vous prÃ©voyez aussi dÃ©clarer, dans la fonction principale, 
+	*	un tableau de type Â« rÃ©sident Â» pour contenir les
+	*	informations de tous les rÃ©sidents de la ville.
 	*/
 
 	resident leResident[nbcasMAX];
 
 	/*
-	*	Au démarrage de l’exécution, la fonction « remplirTabResidents» 
-	*	remplit le tableau des résidents à partir du fichier (s’il existe)
+	*	Au dÃ©marrage de lâ€™exÃ©cution, la fonction Â« remplirTabResidentsÂ» 
+	*	remplit le tableau des rÃ©sidents Ã  partir du fichier (sâ€™il existe)
 	*/
 
 	remplirTabResidents(leResident);
@@ -279,21 +279,21 @@ bool menuPrincipal(resident leResident[])
 {
 
 	/*
-	1. 	Vous allez créer des menus et des sous-menus pour demander
-	*	à l’utilisateur de choisir une opération à effectuer parmi 
-	*	plusieurs possibles. Chaque menu ou sous-menu doit être 
-	*	affiché en haut de la console (effacer la console après 
-	*	chaque opération). Vous devez aussi être capable de revenir 
-	*	au menu principal à partir d’un sous-menu.
+	1. 	Vous allez crÃ©er des menus et des sous-menus pour demander
+	*	Ã  lâ€™utilisateur de choisir une opÃ©ration Ã  effectuer parmi 
+	*	plusieurs possibles. Chaque menu ou sous-menu doit Ãªtre 
+	*	affichÃ© en haut de la console (effacer la console aprÃ¨s 
+	*	chaque opÃ©ration). Vous devez aussi Ãªtre capable de revenir 
+	*	au menu principal Ã  partir dâ€™un sous-menu.
 	*
 	*/
 
 	/*
-	*	Fonction « menuPrincipal » contient le menu principal et 
-	*	il est possible d’atteindre les autres sous-menus.
+	*	Fonction Â« menuPrincipal Â» contient le menu principal et 
+	*	il est possible dâ€™atteindre les autres sous-menus.
 	*/
 
-	switch (demandeCaractere(afficheur_de_menu(0,0))) //Voilà le menu principal.
+	switch (demandeCaractere(afficheur_de_menu(0,0))) //VoilÃ  le menu principal.
 	{
 
 		case '1':
@@ -333,17 +333,17 @@ bool ajouterResidents(resident leResident[])
 
 	/*
 	*	4. Chaque ligne de ce fichier contiendra
-	*	les données d’un résident : son identifiant 
-	*	unique (un numéro commençant à 1 et augmentant
-	*	progressivement pour chaque nouveau résident),
-	*	son nom, son prénom, son NAS (numéro d’assurance
-	*	sociale), le numéro civique, la rue, la ville, 
-	*	l’arrondissement ainsi que la superficie de son 
+	*	les donnÃ©es dâ€™un rÃ©sident : son identifiant 
+	*	unique (un numÃ©ro commenÃ§ant Ã  1 et augmentant
+	*	progressivement pour chaque nouveau rÃ©sident),
+	*	son nom, son prÃ©nom, son NAS (numÃ©ro dâ€™assurance
+	*	sociale), le numÃ©ro civique, la rue, la ville, 
+	*	lâ€™arrondissement ainsi que la superficie de son 
 	*	terrain.
 	*
-	*	Le champ de la superficie devra être en mètre dans 
-	*	le fichier mais l’usager du programme devra pouvoir 
-	*	entrer cette superficie soit en m2 ou en pi2. S’il 
+	*	Le champ de la superficie devra Ãªtre en mÃ¨tre dans 
+	*	le fichier mais lâ€™usager du programme devra pouvoir 
+	*	entrer cette superficie soit en m2 ou en pi2. Sâ€™il 
 	*	entre une valeur en pi2, votre programme convertira 
 	*	la valeur saisie en m2.
 	*
@@ -363,7 +363,7 @@ bool ajouterResidents(resident leResident[])
 			case '1':	
 
 	/*
-	*	Fonction « ajouterResidents » permet d’ajouter un ou plusieurs nouveaux résidents
+	*	Fonction Â« ajouterResidents Â» permet dâ€™ajouter un ou plusieurs nouveaux rÃ©sidents
 	*/
 
 				ajouterunResidents
@@ -409,19 +409,19 @@ bool afficherInfosResidents(resident leResident[])
 {
 
 	/*
-	* 	7. On veut pouvoir afficher les informations des résidents selon les 3 formats suivants :
-	*		a. Dans l’ordre d’apparition dans le fichier.
-	*		b. Dans l’ordre alphabétique des noms. Ne comparez que les premiers caractères des noms.
-	*		c. Dans l’ordre croissant du NAS
+	* 	7. On veut pouvoir afficher les informations des rÃ©sidents selon les 3 formats suivants :
+	*		a. Dans lâ€™ordre dâ€™apparition dans le fichier.
+	*		b. Dans lâ€™ordre alphabÃ©tique des noms. Ne comparez que les premiers caractÃ¨res des noms.
+	*		c. Dans lâ€™ordre croissant du NAS
 	*
-	*	C’est l’utilisateur qui choisira le format d’affichage au moment de l’exécution à partir d’un menu.
+	*	Câ€™est lâ€™utilisateur qui choisira le format dâ€™affichage au moment de lâ€™exÃ©cution Ã  partir dâ€™un menu.
 	*	
-	*	NB : Pour les questions b. et c., faites à chaque fois une copie du tableau de résidents pour 
-	*	effectuer le tri là-dessus.
+	*	NB : Pour les questions b. et c., faites Ã  chaque fois une copie du tableau de rÃ©sidents pour 
+	*	effectuer le tri lÃ -dessus.
 	*/
 
 	/*
-	*	Fonction « afficherInfosResidents » contient un sous-menu pour choisir le format d’affichage des résidents
+	*	Fonction Â« afficherInfosResidents Â» contient un sous-menu pour choisir le format dâ€™affichage des rÃ©sidents
 	*/
 
 	while(true)
@@ -480,12 +480,12 @@ bool modifierResidents(resident leResident[])
 {
 
 	/*
-	*	8. On veut pouvoir modifier n’importe quelle information d’un résident. 
-	*	Pour préciser quel résident à modifier, l’utilisateur saisira le numéro 
-	*	du résident. L’utilisateur choisira ensuite le (ou les) champ(s) à 
+	*	8. On veut pouvoir modifier nâ€™importe quelle information dâ€™un rÃ©sident. 
+	*	Pour prÃ©ciser quel rÃ©sident Ã  modifier, lâ€™utilisateur saisira le numÃ©ro 
+	*	du rÃ©sident. Lâ€™utilisateur choisira ensuite le (ou les) champ(s) Ã  
 	*	modifier et saisira la (ou les) nouvelle(s) valeur(s).
-	*	À la fin des modifications, le fichier contenant les résidents devra être réécrit.
-	*	NB : Le numéro du résident et son NAS ne peuvent pas être modifiés.
+	*	Ã€ la fin des modifications, le fichier contenant les rÃ©sidents devra Ãªtre rÃ©Ã©crit.
+	*	NB : Le numÃ©ro du rÃ©sident et son NAS ne peuvent pas Ãªtre modifiÃ©s.
 	*/
 
 
@@ -512,12 +512,12 @@ bool modifierResidents(resident leResident[])
 					leResident[indice].nom = demandeTexte(texte_Menus[1][9] +": " );
 					break;
 
-				case 2:								//	" (2) Le prénom",
+				case 2:								//	" (2) Le prÃ©nom",
 
 					leResident[indice].prenom = demandeTexte(texte_Menus[1][10] +": " );
 					break;
 
-				case 3:								//	" (3) Le numéro civique",
+				case 3:								//	" (3) Le numÃ©ro civique",
 
 					leResident[indice].nCivique = demandeTexte(texte_Menus[1][12] +": ");
 					break;
@@ -545,8 +545,8 @@ bool modifierResidents(resident leResident[])
 				case 8:								//	" (8) Valider les modifications...",
 
 	/*
-	*	Fonction « modifierResidents » permet de modifier les informations d’un ou plusieurs 
-	*	résident(s). À la fin de la modification, la fonction « reecrireFichier » est appelée.
+	*	Fonction Â« modifierResidents Â» permet de modifier les informations dâ€™un ou plusieurs 
+	*	rÃ©sident(s). Ã€ la fin de la modification, la fonction Â« reecrireFichier Â» est appelÃ©e.
 	*/
 
 					reecrireFichier(leResident);
@@ -597,10 +597,10 @@ bool supprimerResidents(resident leResident[])
 {
 
 	/*
-	*	9. On veut pouvoir supprimer un résident en donnant 
-	*	son identifiant. Après avoir supprimé le (ou les) 
-	*	résident(s) désiré(s), le fichier « residents.txt » 
-	*	est réécrit.
+	*	9. On veut pouvoir supprimer un rÃ©sident en donnant 
+	*	son identifiant. AprÃ¨s avoir supprimÃ© le (ou les) 
+	*	rÃ©sident(s) dÃ©sirÃ©(s), le fichier Â« residents.txt Â» 
+	*	est rÃ©Ã©crit.
 	*/
 
 	int indice;
@@ -653,13 +653,13 @@ bool taxes(resident leResident[])
 	*	pouvoir simuler les revenus de la ville en entrant un 
 	*	taux de taxation en $/m2. Ensuite, votre programme 
 	*	affiche le total des taxes recueillies par la ville et
-	*	les informations du résident qui paye le plus de taxes.
+	*	les informations du rÃ©sident qui paye le plus de taxes.
 	*
 	*	11. Dans chaque sous module (ajout, modification, 
-	*	suppression, taxe), l’utilisateur est invité, avec un 
-	*	menu, à choisir une des options disponibles. Dans le 
-	*	cas où il veut sortir du module, il aura le choix entre
-	*	revenir au menu principal ou quitter l’application.
+	*	suppression, taxe), lâ€™utilisateur est invitÃ©, avec un 
+	*	menu, Ã  choisir une des options disponibles. Dans le 
+	*	cas oÃ¹ il veut sortir du module, il aura le choix entre
+	*	revenir au menu principal ou quitter lâ€™application.
 	*/
 
 	while (true)
@@ -675,7 +675,7 @@ bool taxes(resident leResident[])
       cout << chaine_sortante;
       cout << fixed << setprecision(2) << taux;
             
-      chaine_sortante =  "$/m²\n\n" + texte_Menus[5][4] + " ";// 
+      chaine_sortante =  "$/mÂ²\n\n" + texte_Menus[5][4] + " ";// 
 
       cout << chaine_sortante;
       
@@ -727,8 +727,8 @@ bool afficherTableauResidents(resident leResident[], int indice)
 {
 
 	/*
-	*Fonction « afficherTableauResidents » affiche les informations des résidents. 
-	*Utiliser les fonctions « setiosflags » et « setw ».
+	*Fonction Â« afficherTableauResidents Â» affiche les informations des rÃ©sidents. 
+	*Utiliser les fonctions Â« setiosflags Â» et Â« setw Â».
 	*/
 
 	cout << left  
@@ -750,10 +750,10 @@ bool afficherTableauResidents(resident leResident[], int indice)
 void remplirTabResidents(resident leResident[]) 
 {
 	/*
-	*	3. Les informations de chaque résident devront
-	*	se retrouver dans un fichier texte (à accès 
-	*	séquentiel) que vous nommerez « residents.txt ».
-	*	La gestion des résidents (ajout, suppression et
+	*	3. Les informations de chaque rÃ©sident devront
+	*	se retrouver dans un fichier texte (Ã  accÃ¨s 
+	*	sÃ©quentiel) que vous nommerez Â« residents.txt Â».
+	*	La gestion des rÃ©sidents (ajout, suppression et
 	*	modification) doit passer seulement par la 
 	*	console de votre application en C++.
 	*/
@@ -796,15 +796,15 @@ void ajouterunResidents(resident leResident[], int superficie, string Ville, str
 {
 
 	/*
-	*	6. On veut pouvoir ajouter de nouveaux résidents. 
-	*	Vous allez donc définir une fonction qui permet 
-	*	d’inscrire un ou plusieurs nouveaux résidents.
+	*	6. On veut pouvoir ajouter de nouveaux rÃ©sidents. 
+	*	Vous allez donc dÃ©finir une fonction qui permet 
+	*	dâ€™inscrire un ou plusieurs nouveaux rÃ©sidents.
 	*	Les informations saisies pour chaque nouveau 
-	*	résident doivent être insérées dans le tableau 
-	*	de type « résident ».
-	*	Une fois l’utilisateur choisi de sortir du module 
-	*	d’ajout des résidents, le fichier « residents.txt»
-	*	 est réécrit.
+	*	rÃ©sident doivent Ãªtre insÃ©rÃ©es dans le tableau 
+	*	de type Â« rÃ©sident Â».
+	*	Une fois lâ€™utilisateur choisi de sortir du module 
+	*	dâ€™ajout des rÃ©sidents, le fichier Â« residents.txtÂ»
+	*	 est rÃ©Ã©crit.
 	*/
 
 	leResident[nbResident].Identifiant = Identifiant;
@@ -823,7 +823,7 @@ void ajouterunResidents(resident leResident[], int superficie, string Ville, str
 int ConvertionPaM(string titre)
 {
 	/*
-	*	Fonction « ConvertionPaM » convertit la superficie saisie en p2 en m2
+	*	Fonction Â« ConvertionPaM Â» convertit la superficie saisie en p2 en m2
 	*/
 	char unite = 'm';
 
@@ -832,7 +832,7 @@ int ConvertionPaM(string titre)
 	cin >> unEntier >> unite;
 
 	if (unite == 'm')return unEntier;
-	else if (unite == 'p')return (int)(unEntier / 10.76) + 1; //	J'arrondis vers l'entier supérieur $$, 
+	else if (unite == 'p')return (int)(unEntier / 10.76) + 1; //	J'arrondis vers l'entier supÃ©rieur $$, 
 	return -1;
 
 }
@@ -843,10 +843,10 @@ void reecrireFichier(resident leResident[])
 	ofstream Ecrire(nomdefichier, ios::out);
 
 	/*
-	*Fonction « reecrireFichier » permet de réécrire le fichier à partir du tableau des résidents
+	*Fonction Â« reecrireFichier Â» permet de rÃ©Ã©crire le fichier Ã  partir du tableau des rÃ©sidents
 	*/
 
-	for (int n = 0; n < nbResident; n++)		//	J'utilise le \t parce que ça donne
+	for (int n = 0; n < nbResident; n++)		//	J'utilise le \t parce que Ã§a donne
 		if (leResident[n].Identifiant >= 0)		//	un bon effet dans Notepad++
 			Ecrire << leResident[n].Identifiant 	<< "\t" 
 				   << leResident[n].nom 		 	<< "\t"  
@@ -879,7 +879,7 @@ void afficherSansTri(resident leResident[])
 {
 
 	/*
-	*	Fonction « afficherSansTri » qui affiche les informations des résidents de la ville sans tri
+	*	Fonction Â« afficherSansTri Â» qui affiche les informations des rÃ©sidents de la ville sans tri
 	*/
 
 	afficher_entete();
@@ -888,8 +888,8 @@ void afficherSansTri(resident leResident[])
 	for (int n = 0 ;n <  nbResident;n++)
 	{
 	
-      if (((n %  nb_ligne) == 0) && (n != 0))pause();	//	Ça c'est pour les cas
-      afficherTableauResidents(leResident, n);		//	où la liste est plus	
+      if (((n %  nb_ligne) == 0) && (n != 0))pause();	//	Ã‡a c'est pour les cas
+      afficherTableauResidents(leResident, n);		//	oÃ¹ la liste est plus	
 														//	longue que ce que	
 	}													//	l'affichage peut afficher	 
 }														//	d'un coup soit 24 lignes	
@@ -898,8 +898,8 @@ void tri_Selection_Nom_Croi(resident leResident[])
 {
 
 	/*
-	*	Fonction « tri_Selection_Nom_Croi » tri les résidents dans l’ordre croissant 
-	*	du nom puis affiche les résidents en appelant la fonction « afficherTableauResidents »
+	*	Fonction Â« tri_Selection_Nom_Croi Â» tri les rÃ©sidents dans lâ€™ordre croissant 
+	*	du nom puis affiche les rÃ©sidents en appelant la fonction Â« afficherTableauResidents Â»
 	*/
 
 	resident Les_Residents[nbcasMAX];
@@ -931,16 +931,16 @@ void tri_Selection_Nom_Croi(resident leResident[])
 	for (int n = 0 ;n <  nbResident;n++)
 	{
 	
-		if (((n %  nb_ligne) == 0)&& (n != 0)) pause();	//	Ça c'est pour les cas
+		if (((n %  nb_ligne) == 0)&& (n != 0)) pause();	//	Ã‡a c'est pour les cas
 		afficherTableauResidents(Les_Residents, n);
 	
 	}
 	
-	/*	Pour répondre à la demande, je l'ai fait avec le  
+	/*	Pour rÃ©pondre Ã  la demande, je l'ai fait avec le  
 	*	afficherTableauResidents(Les_Residents, n)
 	*	Mais comme vous allez le voir dans la prochaine
-	*	fonction, j'aurais pu être économe et le faire 
-	*	comme ça.
+	*	fonction, j'aurais pu Ãªtre Ã©conome et le faire 
+	*	comme Ã§a.
 	*
 	afficherSansTri(Les_Residents);
 	*/
@@ -951,17 +951,17 @@ void tri_Selection_NAS_Croi(resident leResident[])
 {
 
 	/*
-	*	Fonction « tri_Selection_NAS_Croi » tri les résidents 
-	*	dans l’ordre croissant du NAS puis affiche les résidents 
-	*	en appelant la fonction « afficherTableauResidents »
+	*	Fonction Â« tri_Selection_NAS_Croi Â» tri les rÃ©sidents 
+	*	dans lâ€™ordre croissant du NAS puis affiche les rÃ©sidents 
+	*	en appelant la fonction Â« afficherTableauResidents Â»
 	*/
 	/*
-	*	Ici, je n'ai rien inventé, tous les mérites vont au
-	*	au Prof et à son exemple de triage en ordre décroissant,
-	*	qui embêtait un peu dans cet environnement, deux ou trois 
-	*	coups de marteau et un peu de peinture et voilà! C'est comme neuf.
-	*	Moi, j'ai juste transposé la grille résident sur le processus.
-	*	C'est littéralement votre bout de code, alors je le référence comme
+	*	Ici, je n'ai rien inventÃ©, tous les mÃ©rites vont au
+	*	au Prof et Ã  son exemple de triage en ordre dÃ©croissant,
+	*	qui embÃªtait un peu dans cet environnement, deux ou trois 
+	*	coups de marteau et un peu de peinture et voilÃ ! C'est comme neuf.
+	*	Moi, j'ai juste transposÃ© la grille rÃ©sident sur le processus.
+	*	C'est littÃ©ralement votre bout de code, alors je le rÃ©fÃ©rence comme
 	*	tel.
 	*/
 
@@ -977,7 +977,7 @@ void tri_Selection_NAS_Croi(resident leResident[])
 
 		n_Max = i;
 
-		for (int j = 0; j < nbResident; j++)	//	Ça, c'était le bug à corriger
+		for (int j = 0; j < nbResident; j++)	//	Ã‡a, c'Ã©tait le bug Ã  corriger
 		{										// 	on doit toujours repartir la 
 												//	recherche depuis l'indice 0
 			if (Les_Residents[j].NAS > Les_Residents[n_Max].NAS)	
@@ -997,7 +997,7 @@ void tri_Selection_NAS_Croi(resident leResident[])
 	afficherSansTri(Les_Residents);
 	*
 	*
-	*	Mais, c'est 7 points FAQUE... je vais m'en tenir à la consigne. :D
+	*	Mais, c'est 7 points FAQUE... je vais m'en tenir Ã  la consigne. :D
 	*/	
 
 	afficher_entete();
@@ -1005,7 +1005,7 @@ void tri_Selection_NAS_Croi(resident leResident[])
 	for (int n = 0 ;n <  nbResident;n++)
 	{
 
-		if (((n %  nb_ligne) == 0)&& (n != 0)) pause();	//	Ça c'est pour les cas
+		if (((n %  nb_ligne) == 0)&& (n != 0)) pause();	//	Ã‡a c'est pour les cas
 		afficherTableauResidents(Les_Residents, n);
 	
 	}
@@ -1043,7 +1043,7 @@ void copierGrille(resident original[], resident copie[] , int rejet)
 void interchanger_position(resident leResident[], int p1, int p2 )
 {
 
-	//int temp;										Même affaire
+	//int temp;										MÃªme affaire
 	resident temp;
 
 				//temp = leTableau[i];				Pareille
@@ -1070,7 +1070,7 @@ void interchanger_position(resident leResident[], int p1, int p2 )
 				leResident[p1].Ville 			= leResident[p2].Ville ;
 				leResident[p1].superficie 		= leResident[p2].superficie ;
 
-				//leTableau[n_Max] = temp;			J'ai rien inventé
+				//leTableau[n_Max] = temp;			J'ai rien inventÃ©
 
 				leResident[p2].Identifiant 		= temp.Identifiant ;
 				leResident[p2].nom 				= temp.nom ;
@@ -1082,7 +1082,7 @@ void interchanger_position(resident leResident[], int p1, int p2 )
 				leResident[p2].Ville 			= temp.Ville ;
 				leResident[p2].superficie		= temp.superficie ;
 
-	/*	C'est carrément la même affaire que vous avez fait
+	/*	C'est carrÃ©ment la mÃªme affaire que vous avez fait
 	*	dans les exemples d'algorithme de tri
 	*/
 
@@ -1092,8 +1092,8 @@ int rechercherIndiceRes(resident leResident[], int Identifiant)
 { 
 
 	/*
-	*	Fonction « rechercherIndiceRes » permet de trouver l’indice d’un résident 
-	*	dont l’identifiant est fourni en paramètre.
+	*	Fonction Â« rechercherIndiceRes Â» permet de trouver lâ€™indice dâ€™un rÃ©sident 
+	*	dont lâ€™identifiant est fourni en paramÃ¨tre.
 	*/
 
 	for(int n = 0; n <= nbResident; n++)
@@ -1120,7 +1120,7 @@ int rechercheSuperMax(resident leResident[])
 
 
 string afficheur_de_menu(int Lemenu, int debut)
-{														//pour éclairer les développeurs dans des projets futurs
+{														//pour Ã©clairer les dÃ©veloppeurs dans des projets futurs
 
 	if (debut == 0)efface();
 	string Menu;
@@ -1144,11 +1144,11 @@ string afficherart()
 
 	/* 
 	*	Un peu de compression. 
-	*	Dans un ordinateur avec des Gigas de mémoire, on a tendance à se foutre de la RAM.
-	* 	Toutefois, sur un système type AVR avec 2Ko, gros max 8Ko, les ressources 
-	*	sont précieuses. Je pourrais en condenser plus, j'ai juste fait les bords et 
-	*	un peu au milieu, mais bon, ce n'est pas sur un système AVR et de la 
-	*	RAM, il y en a en masse. :D Le but était surtout de démontrer le savoir-faire.
+	*	Dans un ordinateur avec des Gigas de mÃ©moire, on a tendance Ã  se foutre de la RAM.
+	* 	Toutefois, sur un systÃ¨me type AVR avec 2Ko, gros max 8Ko, les ressources 
+	*	sont prÃ©cieuses. Je pourrais en condenser plus, j'ai juste fait les bords et 
+	*	un peu au milieu, mais bon, ce n'est pas sur un systÃ¨me AVR et de la 
+	*	RAM, il y en a en masse. :D Le but Ã©tait surtout de dÃ©montrer le savoir-faire.
 	*/
 
 }
