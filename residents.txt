@@ -1,0 +1,12 @@
+1	Plante	Frederic	90000000	243	St-Jetable	-	Saint-…rable	21354
+4	Lebos	Samuel	500000000	765	Gyselle	-	Saint-…rable	5443
+7	Julio	…glÈsias	200000000	12	Garnotte	-	Saint-…rable	3532
+9	Costa	Julien	700000000	764	Gyselle	-	Saint-…rable	3244
+15	Marc	Larive	800000000	23	gauchetiere	-	Saint-…rable	2177
+19	Lise	Tremblay	10000002	23	Park	-	Saint-…rable	2177
+27	Martin	Joâl	300000000	32	Marquette	-	Saint-…rable	21769
+28	Jacques	Paskal	100000000	23	De_laRuelle	-	Saint-…rable	30997
+29	Noriega	Maxel	400000000	23	Ramaux	-	Saint-…rable	21761
+30	Potter	Harry	400000001	123C	Levesque	Poudlar	Saint-…rable	112356
+31	Betina	Plante	23468234	23	De_La_Baie	-	Saint-ê…rable	12354623
+32	St-Denis	Jacques	123456789	777	Labelle	-	Saint-ê…rable	2341
