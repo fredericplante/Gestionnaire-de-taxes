@@ -5,4 +5,5 @@ Ce code est suffisament hors du commun pour dire que si tu oses l'utiliser pour 
 c'est certain que ton prof va te coler pour plagiat. Toutes fois, je considère que c'est une bonne source à analiser,
 si tu veux augmenter ta moyenne.
 
-Tout est essenciellement en Québécois, sauf pour les commande lié au C++ lui-même, pour moi c'est très important.
+Tout est essenciellement en québécois, sauf pour les commande liées au C++ lui-même, pour moi, étant un québéphone, pour moi,
+c'est très important.
